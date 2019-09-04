@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Cera Pro';
+    src: url("../fonts/CeraPro-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url("../fonts/CeraPro-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url("../fonts/CeraPro-Italic.ttf");
+    font-style: italic;
+}
+
+/* 
+CeraPro-BlackItalic.ttf
+CeraPro-BoldItalic.ttf
+CeraPro-LightItalic.ttf
+CeraPro-MediumItalic.ttf
+CeraPro-ThinItalic.ttf
+
+CeraPro-Black.ttf
++ CeraPro-Bold.ttf
++ CeraPro-Italic.ttf
+CeraPro-Light.ttf
+CeraPro-Medium.ttf
++ CeraPro-Regular.ttf
+CeraPro-Thin.ttf
+
+*/

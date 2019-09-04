@@ -1,0 +1,59 @@
+/* Шапка одной таблицы - заголовок матча */
+.header-match {
+    /* border-top: var(--color-football) solid 2px;
+    border-bottom: var(--color-football) solid 2px; */
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+.darkHeader {
+    background-color: var(--color-500-20);
+}
+
+.header-match-collapse {
+    border-radius: 8px;
+}
+
+/* Ячейка заголовка где команды: занимает как бы две ячейки содержания: команда и */
+.header-match .teams {
+    width: 100%;
+    font-weight: bold;
+}
+
+/* В правой части заголовка - названия колонок коэфов серым и по центру по ВЕРТИКАЛИ*/
+.header-match .col.coef{
+    color: var(--color-900-40)
+}
+
+
+.icoSport{  /* Размер иконки спорта 18px - задается в шаблоне */
+    margin-right: 4px;
+    margin-top: -2px;
+}
+
+.icoMatchCell { /* "Ячейка"-место для флага/иконки матча - слева разделитель */
+    height: 18px;    /* Размер иконки флага 18px*/
+    width: 16px;
+    margin: 0 4px 0 4px;    
+    padding: 0 4px 0 7px;
+    border-left: 1px solid var(--color-500-20); 
+}
+
+
+.icoMatchWrapper { 
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: gray; */
+}
+
+.FlagWrapper { /* Маска-кружок для флага */
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.icoFlag {
+    height: 18px;
+}

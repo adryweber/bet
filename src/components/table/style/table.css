@@ -1,0 +1,49 @@
+@import '../../../style/palette.css';
+
+
+.link {
+    color: var(--color-blue);
+}
+/* Контейнер спорта */
+.sport { 
+    /* font-family: 'Cera Pro', Arial, Helvetica, sans-serif; */
+    color: var(--color-900);
+    margin-bottom: 30px;    
+}
+
+/* Заголовок спорта */
+.sport-title {
+    font-size: 20px;
+}
+
+/* Контейрер мачта */
+.match { 
+    font-size: 12px;    
+    background-color: white;
+    border-radius: 8px;
+    /* overflow: hidden; */
+    margin-top: 20px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+}
+
+
+/* Контейнер одной игры (в ней может быть несколько строк): отступ снизу и бордер снизу 
+.play:first-child + .play:not(:last-child), .play + .play:not(:last-child) { 
+*/
+.play:first-child, .play + .play:not(:last-child) { 
+    /* padding-bottom: 10px; */
+    /* border-bottom: 1px solid var(--color-500-20); */
+}
+
+/* Контейнер со строками таблицы - который сворачивается - паддинг 
+и отрицательный маргин, что бы оверфлоу не обрезал вынесеные в лево звезду*/
+.matchGrid {
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    padding-left: 40px;
+    margin-left: -40px;
+}
+
+.matchGrid.none {
+    max-height:0;
+}

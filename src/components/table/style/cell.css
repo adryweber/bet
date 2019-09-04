@@ -1,0 +1,92 @@
+/* Базовый стиль ячейки - прописан везде */
+.col {
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;
+    align-items: center;   
+    white-space: pre-wrap;  
+    height: 30px;
+    padding: 0 5px 0 5px;
+}
+
+ /* Ячейка с названиями команд или периода: первая в строке */
+.teams {
+    width: 60%;
+    padding-left: 10px;    
+    justify-content: flex-start;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Сами названия команд - ссылка по ховеру */
+.teamsName:hover {
+    margin-top: 1px;
+    border-bottom: 1px var(--color-500-40) solid;
+    cursor: pointer;
+}
+
+/* part - Часть соревнования. Выводится в левой ячейке (боковике), под названием игры. 
+ Здесь даем отсутп для визуализации 2-го уровня */
+.part {
+    padding-left: 30px;
+}
+
+/* Ячейка со счетом-временем*/
+.timeScore {
+    width: 40%;
+    padding-right: 5px;
+    justify-content: flex-end;
+}
+
+.score {
+    color: var(--color-red);
+}
+
+/* Ячейка с коэфом */
+.coef {
+    width: 40px;
+    padding: 0;
+}
+
+/* Серый боковик */
+.grayBg {
+    background-color:  rgba(152, 156, 180, .05);
+}
+
+
+/* По ховеру над строкой (кроме шапки!!!) подсвечиаем боковик, где название команд */
+/* Для светлой строчки в чересполосице */
+.row:not(.header-match):hover > .row-left-side-0, 
+.row:not(.header-match):hover > .row-left-side-1 {
+    background-color:  rgba(152, 156, 180, .03);
+}
+
+/* Для темной строчки в чересполосице */
+.row.dark:hover > .row-left-side-0, 
+.row.dark:hover > .row-left-side-1 {
+    background-color:  rgba(152, 156, 180, .10);
+}
+
+/* Для варианта когда боковик серый */
+.row:not(.header-match):hover > .row-left-side-0.grayBg, 
+.row:not(.header-match):hover > .row-left-side-1.grayBg {
+    background-color:  rgba(152, 156, 180, .2);
+}
+
+
+
+.non-click {
+    color: var(--color-500);
+}
+
+/* Ховер над ячейкой с коэфом, кроме ячеек в шапке и кроме некликабельных Форы и Тотала */
+.row:not(.header-match) .coef:not(.non-click):hover {
+    background-color:  rgba(152, 156, 180, .15);
+    cursor: pointer;
+}
+
+/* Ховер над шапкой таблицы */
+.header-match:hover {
+    background-color:  rgba(152, 156, 180, .25);
+}

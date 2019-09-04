@@ -1,0 +1,36 @@
+
+.modelNavigatorWrapper {
+    position: absolute;
+    left: 0;
+    width: 400px;
+    padding: 10px;
+}
+
+.modelNavigator{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modelNavigator.none {
+    opacity: 0; 
+}
+
+.modelNavigator a {
+    font-size: 12px;
+    color: var(--color-500);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-500-20);
+    margin-bottom: 5px;
+}
+
+.modelNavigatorWrapper .action {
+    color: var(--color-500);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,82 @@
+/* Общий класс для строки */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* черезполосица */
+.row.dark {
+    background-color: var(--color-500-10);
+}
+
+/* Группа колонок по общим коэфам */
+.coefGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+    position: relative;
+    border-left: 1px solid var(--color-500-20);
+}
+.header-match .coefGroup {
+    border-left: 1px solid transparent;
+}
+
+/* Звезда избранного */
+.favWrapper {
+    width: 30px;
+    height: 30px;
+    position: absolute; 
+    opacity: 0;    
+    left: -25px;
+    top: 5px;
+    z-index: 100;       
+}
+
+.row:hover > .favWrapper {
+    opacity: 1;   
+    cursor: pointer;
+}
+
+/* Иконки видео и схемы */
+.icoVideo, .icoShema {
+    margin-top: -2px;
+    margin-right: 4px;
+}
+
+/* Иконка шеврона */
+.icoShevronDown{
+    margin-top: -4px;
+    margin-right: 4px;
+}
+
+.icoShevronDymmy {
+    width: 16px;
+}
+
+/*бщий класс половинки строки */
+.row-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+/* Вариант ширины левой и правой половинки для двойных исходов (кэфов больше) */
+.row-left-side-1 {
+    width: 49%;
+}
+.row-right-side-1 {
+    width: 51%;
+}
+
+/* Вариант ширины левой и правой половинки без двойных исходов (кэфов меньше) */
+.row-left-side-0 {
+    width: 65%;
+}
+.row-right-side-0 {
+    width: 35%;
+}
